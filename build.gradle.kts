@@ -5,10 +5,11 @@ val logback_version: String by project
 plugins {
     kotlin("jvm") version "2.0.0"
     id("io.ktor.plugin") version "2.3.12"
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.0.0"
 }
 
 group = "com.tietoevry"
-version = "0.0.1"
+version = "1.0.0"
 
 application {
     mainClass.set("com.tietoevry.ApplicationKt")
@@ -23,6 +24,7 @@ repositories {
 
 dependencies {
     implementation("io.ktor:ktor-server-auth:$ktor_version")
+    implementation("io.ktor:ktor-server-auth-jwt:$ktor_version")
     implementation("io.ktor:ktor-server-core-jvm")
     implementation("io.ktor:ktor-server-netty-jvm")
     implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor_version")

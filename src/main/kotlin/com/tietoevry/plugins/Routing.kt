@@ -1,18 +1,20 @@
 package com.tietoevry.plugins
 
+import com.tietoevry.dto.Settings
 import com.tietoevry.routes.dataRouting
 import com.tietoevry.routes.tokenRouting
+import com.tietoevry.service.TokenService
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 
-fun Application.configureRouting() {
+fun Application.configureRouting(settings: Settings) {
     routing {
         get("/") {
-            call.respondText("Hello World!")
+            call.respondText("Alive!")
         }
 
         dataRouting()
-        tokenRouting()
+        tokenRouting(settings)
     }
 }
