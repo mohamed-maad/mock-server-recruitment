@@ -13,6 +13,6 @@ data class PersonCreatedEvent(
     val phone: String,
 ) {
     fun toJson(): String {
-        return Json.encodeToString(this)
+        return Json.encodeToString(this).trimIndent()
     }
 }
