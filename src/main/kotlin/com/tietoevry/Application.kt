@@ -3,7 +3,6 @@ package com.tietoevry
 import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm
 import com.tietoevry.plugins.*
-import com.tietoevry.service.TokenService
 import com.tietoevry.util.SettingsUtil.readSettingsFromJson
 import com.tietoevry.util.SplashScreenUtil
 import io.ktor.client.*
