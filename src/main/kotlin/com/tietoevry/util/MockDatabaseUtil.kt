@@ -3,6 +3,8 @@ package com.tietoevry.util
 import com.tietoevry.dto.Event
 import com.tietoevry.dto.PersonCreatedEvent
 import com.tietoevry.types.EventType.*
+import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.JsonPrimitive
 
 object MockDatabaseUtil {
     fun getEvents(): List<Event> {
@@ -231,119 +233,119 @@ object MockDatabaseUtil {
             Event(
                 socSecNum = "19056726783",
                 eventType = PHONE_CHANGE,
-                value = "45536380",
+                value = JsonPrimitive("45536380"),
                 sequenceNumber = 18,
                 timestamp = "2024-06-28T08:00:17"
             ),
             Event(
                 socSecNum = "31077714505",
                 eventType = NAME_CHANGE,
-                value = "Kari Krokstad",
+                value = JsonPrimitive("Kari Krokstad"),
                 sequenceNumber = 19,
                 timestamp = "2024-06-28T08:00:18"
             ),
             Event(
                 socSecNum = "25102070758",
                 eventType = ADDRESS_CHANGE,
-                value = "Nyveien 45",
+                value = JsonPrimitive("Nyveien 45"),
                 sequenceNumber = 20,
                 timestamp = "2024-06-28T08:00:19"
             ),
             Event(
                 socSecNum = "31085439599",
                 eventType = EMAIL_CHANGE,
-                value = "per.newemail@epost.no",
+                value = JsonPrimitive("per.newemail@epost.no"),
                 sequenceNumber = 21,
                 timestamp = "2024-06-28T08:00:20"
             ),
             Event(
                 socSecNum = "03049448170",
                 eventType = PHONE_CHANGE,
-                value = "91122345",
+                value = JsonPrimitive("91122345"),
                 sequenceNumber = 22,
                 timestamp = "2024-06-28T08:00:21"
             ),
             Event(
                 socSecNum = "17084718343",
                 eventType = NAME_CHANGE,
-                value = "Lars Larsen-Nygaard",
+                value = JsonPrimitive("Lars Larsen-Nygaard"),
                 sequenceNumber = 23,
                 timestamp = "2024-06-28T08:00:22"
             ),
             Event(
                 socSecNum = "01018238361",
                 eventType = ADDRESS_CHANGE,
-                value = "Enggata 5",
+                value = JsonPrimitive("Enggata 5"),
                 sequenceNumber = 24,
                 timestamp = "2024-06-28T08:00:23"
             ),
             Event(
                 socSecNum = "04082085608",
                 eventType = EMAIL_CHANGE,
-                value = "elin.eriksen@nyepost.no",
+                value = JsonPrimitive("elin.eriksen@nyepost.no"),
                 sequenceNumber = 25,
                 timestamp = "2024-06-28T08:00:24"
             ),
             Event(
                 socSecNum = "05058128041",
                 eventType = PHONE_CHANGE,
-                value = "92255667",
+                value = JsonPrimitive("92255667"),
                 sequenceNumber = 26,
                 timestamp = "2024-06-28T08:00:25"
             ),
             Event(
                 socSecNum = "11120673493",
                 eventType = NAME_CHANGE,
-                value = "Ivar Iversen-Hansen",
+                value = JsonPrimitive("Ivar Iversen-Hansen"),
                 sequenceNumber = 27,
                 timestamp = "2024-06-28T08:00:26"
             ),
             Event(
                 socSecNum = "13039245072",
                 eventType = ADDRESS_CHANGE,
-                value = "Ny adresse 67",
+                value = JsonPrimitive("Ny adresse 67"),
                 sequenceNumber = 28,
                 timestamp = "2024-06-28T08:00:27"
             ),
             Event(
                 socSecNum = "07026404422",
                 eventType = EMAIL_CHANGE,
-                value = "hanna.hansen@nyepost.no",
+                value = JsonPrimitive("hanna.hansen@nyepost.no"),
                 sequenceNumber = 29,
                 timestamp = "2024-06-28T08:00:28"
             ),
             Event(
                 socSecNum = "14027335609",
                 eventType = PHONE_CHANGE,
-                value = "94455678",
+                value = JsonPrimitive("94455678"),
                 sequenceNumber = 30,
                 timestamp = "2024-06-28T08:00:29"
             ),
             Event(
                 socSecNum = "14129113635",
                 eventType = ADDRESS_CHANGE,
-                value = "Hovedgata 21",
+                value = JsonPrimitive("Hovedgata 21"),
                 sequenceNumber = 31,
                 timestamp = "2024-06-28T08:00:30"
             ),
             Event(
                 socSecNum = "23094440017",
                 eventType = NAME_CHANGE,
-                value = "Ole Olsen-Berg",
+                value = JsonPrimitive("Ole Olsen-Berg"),
                 sequenceNumber = 32,
                 timestamp = "2024-06-28T08:00:31"
             ),
             Event(
                 socSecNum = "13016513819",
                 eventType = EMAIL_CHANGE,
-                value = "lise.nilsen@nyepost.no",
+                value = JsonPrimitive("lise.nilsen@nyepost.no"),
                 sequenceNumber = 33,
                 timestamp = "2024-06-28T08:00:32"
             ),
             Event(
                 socSecNum = "31124706052",
                 eventType = PHONE_CHANGE,
-                value = "90999011",
+                value = JsonPrimitive("90999011"),
                 sequenceNumber = 34,
                 timestamp = "2024-06-28T08:00:33"
             )

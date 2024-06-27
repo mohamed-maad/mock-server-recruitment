@@ -3,6 +3,8 @@ package com.tietoevry.dto
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.encodeToJsonElement
 
 @Serializable
 data class PersonCreatedEvent(
@@ -12,7 +14,7 @@ data class PersonCreatedEvent(
     val email: String,
     val phone: String,
 ) {
-    fun toJson(): String {
-        return Json.encodeToString(this).trimIndent()
+    fun toJson(): JsonElement {
+        return Json.encodeToJsonElement(this)
     }
 }
