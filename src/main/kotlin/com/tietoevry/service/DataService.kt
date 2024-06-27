@@ -18,8 +18,10 @@ class DataService {
         }
     }
 
-    fun eventFlowFromSequenceNumber(sequenceNumber: Long): Flow<Event> {
+    fun eventFlowFromSequenceNumber(sequenceNumber: Long): Flow<Event>? {
         val eventList = MockDatabaseUtil.getEvents()
+
+        if (sequenceNumber > eventList.last().sequenceNumber) return null
 
         return flow {
             eventList
@@ -29,6 +31,10 @@ class DataService {
                 delay(DELAY_MILLIS)
             }
         }
+    }
+
+    fun getEvent(sequenceNumber: Long): Event? {
+        return MockDatabaseUtil.getEvents().find { it.sequenceNumber == sequenceNumber }
     }
 
     companion object {
