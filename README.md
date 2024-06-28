@@ -4,6 +4,11 @@
 
 This is an application for testing the skills of developers applying for *Java Backend Developer* positions.
 
+### Tips
+
+Use your favourite http client (curl, Postman, Insomnia) to test the endpoints of this server. Looking at the
+response will help you understand how to handle the data.
+
 ## What you will need
 
 1) Dev environment with Java 21
