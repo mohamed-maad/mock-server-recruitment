@@ -20,7 +20,7 @@ This is an application for testing the skills of developers applying for *Java B
 
 This application is a mock server which mimics the behaviour of Folkeregisteret and how Skatteetaten handles
 data distribution about people through feed. All information about a person starts by an event which signals
-that the person har been created, followed by different events which signal that an attributes of the person has
+that the person har been created, followed by different events which signal that an attribute of the person has
 been updated. 
 
 A person has the following format:
@@ -37,6 +37,7 @@ A person has the following format:
 
 The events are stored in a "database" and can be fetched by a client, either by fetching all events,
 fetching events from a specific sequence number or fetching a specific event by its sequence number.
+All events have a unique sequence number, and all sequences are in order.
 
 An event has the following format:
 
@@ -50,11 +51,37 @@ An event has the following format:
 }
 ```
 
+Every attribute of a person can be updated, even the social security number. When the social security number is updated,
+the field `socSecNum` points to the old social security number, and the field `value` points to the new social security number.
+
+When a person is created, the event type is `PERSON_CREATED`, and a person Json is set as the value of the event.
+
+## The task
+
+0) Clone the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment-junior 
+1) Create a REST client which gets the Jwt token from the server. Use username and password
+
+Use JWT token to fetch events from the server.
+
+2) Create a REST client which fetches events from the server. 
+3) Save the events to a table using DAOs.
+4) Use the same events to create a table with people, and update their information.
+5) Create a REST controller which allows for a client to fetch a person by its social security number. The person
+should be updated with all events which have happened to the person.
+6) Run tests using the test endpoints on this mock server. A client on this mock server will try to connect and 
+fetch data from your person endpoint. The tests will check if the server is working as expected.
 
 
+### 0) Setup:
 
+Ensure that your application is responding on the following url: http://localhost:8081
 
 ### 1) Get token:
+
+```
+GET http://localhost:8080/token
+Content-Type: application/x-www-form-urlencoded
+```
 
 Use the following credentials:
 
@@ -63,12 +90,18 @@ username: Skjervald
 password: Tvedt
 ```
 
-### 2) Use token to fetch data about people:
+### 2) Use token to fetch events:
 
 ```
-GET /events
-GET /events/from/{sequenceNumber}
-GET /events/{sequenceNumber}
+GET http://0.0.0.0:8080/events
+Authorization: Bearer {{mock_server_token}}
+```
+
+Other endpoints:
+
+```
+GET http://localhost:8080/events/23
+GET http://0.0.0.0:8080/events/from/13
 ```
 
 ### 3) Save people and events to database:
