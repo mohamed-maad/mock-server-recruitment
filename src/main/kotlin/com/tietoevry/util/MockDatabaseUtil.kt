@@ -3,7 +3,6 @@ package com.tietoevry.util
 import com.tietoevry.dto.Event
 import com.tietoevry.dto.Person
 import com.tietoevry.dto.PersonChange
-import com.tietoevry.dto.PersonCreatedEvent
 import com.tietoevry.types.EventType.*
 import kotlinx.serialization.json.JsonPrimitive
 
@@ -13,7 +12,7 @@ object MockDatabaseUtil {
             Event(
                 socSecNum = "19056726783",
                 eventType = PERSON_CREATED,
-                value = PersonCreatedEvent(
+                value = Person(
                     name = "Ola Nordmann",
                     socSecNum = "19056726783",
                     address = "Tollbugata 11",
@@ -50,7 +49,7 @@ object MockDatabaseUtil {
             Event(
                 socSecNum = "31077714505",
                 eventType = PERSON_CREATED,
-                value = PersonCreatedEvent(
+                value = Person(
                     name = "Kari Olsen",
                     socSecNum = "31077714505",
                     address = "Arendalsveien 12",
@@ -87,7 +86,7 @@ object MockDatabaseUtil {
             Event(
                 socSecNum = "25102070758",
                 eventType = PERSON_CREATED,
-                value = PersonCreatedEvent(
+                value = Person(
                     name = "Nils Hansen",
                     socSecNum = "25102070758",
                     address = "Hovedgata 45",
@@ -125,7 +124,7 @@ object MockDatabaseUtil {
             Event(
                 socSecNum = "51088439599",
                 eventType = PERSON_CREATED,
-                value = PersonCreatedEvent(
+                value = Person(
                     name = "Per Persson",
                     socSecNum = "31085439599",
                     address = "Fjellveien 1",
@@ -163,7 +162,7 @@ object MockDatabaseUtil {
             Event(
                 socSecNum = "03049448170",
                 eventType = PERSON_CREATED,
-                value = PersonCreatedEvent(
+                value = Person(
                     name = "Anna Andersson",
                     socSecNum = "03049448170",
                     address = "Sjøgata 3",
@@ -201,7 +200,7 @@ object MockDatabaseUtil {
             Event(
                 socSecNum = "04082085608",
                 eventType = PERSON_CREATED,
-                value = PersonCreatedEvent(
+                value = Person(
                     name = "Elin Eriksen",
                     socSecNum = "04082085608",
                     address = "Solbakken 10",
@@ -239,7 +238,7 @@ object MockDatabaseUtil {
             Event(
                 socSecNum = "11120673493",
                 eventType = PERSON_CREATED,
-                value = PersonCreatedEvent(
+                value = Person(
                     name = "Ivar Iversen",
                     socSecNum = "11120673493",
                     address = "Markveien 15",

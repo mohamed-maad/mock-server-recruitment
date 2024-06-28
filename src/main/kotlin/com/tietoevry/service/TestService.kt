@@ -56,7 +56,7 @@ class TestService(
             logger.info("Test passed. Found all people in the database.")
             true
         } else {
-            logger.info("Test failed. Found identical ${personList.size} people in the database, expected ${actualPersonList.size}.")
+            logger.info("Test failed. Found ${personList.size} identical people in the database, expected ${actualPersonList.size}.")
             false
         }
     }
