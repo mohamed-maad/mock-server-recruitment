@@ -74,7 +74,7 @@ Use JWT token to fetch events from the server.
 5) Create a REST controller which allows for a client to fetch a person by its social security number. The person
 should be updated with all events which have happened to the person.
 6) Run tests using the test endpoints on this mock server. A client on this mock server will try to connect and 
-fetch data from your person endpoint. The tests will check if the server is working as expected.
+fetch data from your person endpoint. The tests will check if your application is working as expected.
 7) Send a pull request to the skeleton repository with your solution.
 
 ### 0) Setup:
