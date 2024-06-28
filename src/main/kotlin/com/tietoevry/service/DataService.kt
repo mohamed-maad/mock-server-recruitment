@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.flow
 
 class DataService {
     fun eventFlow(): Flow<Event> {
-        val eventList = MockDatabaseUtil.getEvents()
+        val eventList = MockDatabaseUtil.getEventList()
 
         return flow {
             eventList.forEach {
@@ -19,7 +19,7 @@ class DataService {
     }
 
     fun eventFlowFromSequenceNumber(sequenceNumber: Long): Flow<Event>? {
-        val eventList = MockDatabaseUtil.getEvents()
+        val eventList = MockDatabaseUtil.getEventList()
 
         if (sequenceNumber > eventList.last().sequenceNumber) return null
 
@@ -34,7 +34,7 @@ class DataService {
     }
 
     fun getEvent(sequenceNumber: Long): Event? {
-        return MockDatabaseUtil.getEvents().find { it.sequenceNumber == sequenceNumber }
+        return MockDatabaseUtil.getEventList().find { it.sequenceNumber == sequenceNumber }
     }
 
     companion object {
