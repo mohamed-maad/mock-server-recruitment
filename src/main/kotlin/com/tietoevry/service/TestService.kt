@@ -1,6 +1,7 @@
 package com.tietoevry.service
 
 import com.tietoevry.client.PersonClient
+import com.tietoevry.dto.Person
 import com.tietoevry.util.MockDatabaseUtil
 import kotlinx.coroutines.runBlocking
 import org.slf4j.LoggerFactory
@@ -39,15 +40,23 @@ class TestService(
     }
 
     fun testForDatabaseContent(): Boolean {
-        val person = runBlocking {
-            personClient.getPerson(SOCSECNUM_1, TOKEN)
+        val actualPersonList = MockDatabaseUtil.getPersonList()
+        val personList = mutableListOf<Person?>()
+
+        runBlocking {
+            actualPersonList.forEach { actualPerson ->
+                val person = personClient.getPerson(actualPerson.socSecNum, TOKEN)
+                if (person != null && person == actualPerson)  {
+                    personList.add(person)
+                }
+            }
         }
 
-        return if (person != null) {
-            logger.info("Test passed. Person found with auth: $person")
+        return if (personList.size == actualPersonList.size) {
+            logger.info("Test passed. Found all people in the database.")
             true
         } else {
-            logger.info("Test failed. No person found with auth")
+            logger.info("Test failed. Found ${personList.size} people in the database, expected ${actualPersonList.size}.")
             false
         }
     }
