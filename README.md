@@ -13,7 +13,7 @@ response will help you understand how to handle the data.
 
 1) Dev environment with Java 21
 2) PostgreSQL database 14 or newer
-3) Clone the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment-junior
+3) Clone the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment
 
 ## Requirements for the task
 
@@ -63,7 +63,7 @@ When a person is created, the event type is `PERSON_CREATED`, and a `Person` Jso
 
 ## The task
 
-0) Clone the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment-junior 
+0) Clone the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment 
 1) Create a REST client which gets the Jwt token from the server. Use username and password
 
 Use JWT token to fetch events from the server.
@@ -144,6 +144,6 @@ GET http://localhost:8080/test/3
 ### 7) Send a pull request:
 
 Send a pull request to the skeleton repository with your solution at: 
-https://github.com/mohamed-maad/server-skeleton-recruitment-junior
+https://github.com/mohamed-maad/server-skeleton-recruitment 
 
 
