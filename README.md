@@ -23,7 +23,7 @@ data distribution about people through feed. All information about a person star
 that the person har been created, followed by different events which signal that an attribute of the person has
 been updated. 
 
-A person has the following format:
+A `Person` has the following format:
 
 ```Json
 {
@@ -39,7 +39,7 @@ The events are stored in a "database" and can be fetched by a client, either by 
 fetching events from a specific sequence number or fetching a specific event by its sequence number.
 All events have a unique sequence number, and all sequences are in order.
 
-An event has the following format:
+An `Event` has the following format:
 
 ```Json
 {
@@ -54,7 +54,7 @@ An event has the following format:
 Every attribute of a person can be updated, even the social security number. When the social security number is updated,
 the field `socSecNum` points to the old social security number, and the field `value` points to the new social security number.
 
-When a person is created, the event type is `PERSON_CREATED`, and a person Json is set as the value of the event.
+When a person is created, the event type is `PERSON_CREATED`, and a `Person` Json is set as the value of the `Event`.
 
 ## The task
 
@@ -93,7 +93,7 @@ password: Tvedt
 ### 2) Use token to fetch events:
 
 ```
-GET http://0.0.0.0:8080/events
+GET http://localhost:8080/events
 Authorization: Bearer {{mock_server_token}}
 ```
 
@@ -101,27 +101,38 @@ Other endpoints:
 
 ```
 GET http://localhost:8080/events/23
-GET http://0.0.0.0:8080/events/from/13
+GET http://localhost:8080/events/from/13
 ```
 
-### 3) Save people and events to database:
+### 3) Save events to database:
+
+Use a DAO
+
+### 4) Save people to database and update their information:
+
+Use a DAO
+
+### 5) Create person controller:
+
+The endpoint should respond to at the following url: http://localhost:8081/person/{socSecNum}
+
+The client of this mock server sends the following headers, which is the one your endpoint is responding to:
 
 ```
-POST /events
+Authorization: Dummy.Token.For.Your.Convenience
+Accept: application/json
 ```
 
-### 4) Create endpoint for fetching data from database:
+The client expects a `Person` in return.
+
+### 6) Run tests:
+
+These don't need authentication. You can trigger them through curl or Postman, or from your program if you want.
 
 ```
-GET /person/{socialSecurityNumber}
-```
-
-### 5) Run tests:
-
-```
-GET /test/1
-GET /test/2
-GET /test/3
+GET http://localhost:8080/test/1
+GET http://localhost:8080/test/2
+GET http://localhost:8080/test/3
 ```
 
 
