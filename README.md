@@ -1,6 +1,6 @@
 # Mock Server DS
 
-## OPPGAVETEKSTEN ER IKKE FERDIG
+### Please send an email if something is not working as expected.
 
 This is an application for testing the skills of developers applying for *Java Backend Developer* positions.
 
