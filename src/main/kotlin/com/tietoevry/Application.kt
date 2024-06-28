@@ -2,9 +2,11 @@ package com.tietoevry
 
 import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm
+import com.tietoevry.client.PersonClient
 import com.tietoevry.dto.Event
 import com.tietoevry.plugins.*
 import com.tietoevry.service.DataService
+import com.tietoevry.service.TestService
 import com.tietoevry.util.SettingsUtil.readSettingsFromJson
 import com.tietoevry.util.SplashScreenUtil
 import io.ktor.client.*
@@ -75,10 +77,12 @@ fun Application.module() {
         }
     }
 
+    val personClient = PersonClient(client)
     val dataService = DataService()
+    val testService = TestService(personClient)
 
     configureSerialization()
-    configureRouting(dataService, settings)
+    configureRouting(dataService, testService, settings)
 }
 
 suspend fun ApplicationCall.respondSse(eventFlow: Flow<Event>) {

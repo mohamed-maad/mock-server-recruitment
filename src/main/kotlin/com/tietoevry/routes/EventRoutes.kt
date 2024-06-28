@@ -9,7 +9,7 @@ import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import io.ktor.server.util.*
 
-fun Route.dataRouting(dataService: DataService) {
+fun Route.eventRouting(dataService: DataService) {
     authenticate("auth-jwt") {
         route("events") {
             get {
