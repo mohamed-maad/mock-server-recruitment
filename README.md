@@ -15,7 +15,7 @@ response will help you understand how to handle the data.
 2) PostgreSQL database 14 or newer
 3) Clone the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment-junior
 
-## Requirements for the application
+## Requirements for the task
 
 1) Written in Java or Kotlin
 2) Use Spring or Quarkus framework
