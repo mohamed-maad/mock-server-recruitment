@@ -1,1 +1,1 @@
-rootProject.name = "mock-server-recruitment-junior"
+rootProject.name = "mock-server-recruitment"

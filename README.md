@@ -69,7 +69,7 @@ When a person is created, the event type is `PERSON_CREATED`, and a `Person` Jso
 Use JWT token to fetch events from the server.
 
 2) Create a REST client which fetches events from the server. 
-3) Save the events to a table using DAOs.
+3) Save the events to a table.
 4) Use the same events to create a table with people, and update their information.
 5) Create a REST controller which allows for a client to fetch a person by its social security number. The person
 should be updated with all events which have happened to the person.
@@ -112,11 +112,11 @@ GET http://localhost:8080/events/from/13
 
 ### 3) Save events to database:
 
-Use a DAO
+Save to a table in your database
 
 ### 4) Save people to database and update their information:
 
-Use a DAO
+USave to a table in your database
 
 ### 5) Create person controller:
 
