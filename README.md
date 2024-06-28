@@ -127,7 +127,7 @@ The client expects a `Person` in return.
 
 ### 6) Run tests:
 
-These don't need authentication. You can trigger them through curl or Postman, or from your program if you want.
+These don't need authentication. You can trigger them through curl or Insomnia, or from your program if you want.
 
 ```
 GET http://localhost:8080/test/1
