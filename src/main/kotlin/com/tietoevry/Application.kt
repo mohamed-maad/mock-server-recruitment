@@ -89,8 +89,10 @@ suspend fun ApplicationCall.respondSse(eventFlow: Flow<Event>) {
     response.cacheControl(CacheControl.NoCache(null))
     respondBytesWriter(contentType = ContentType.Text.EventStream) {
         eventFlow.collect { event ->
-            writeStringUtf8(event.toJson())
-            writeStringUtf8("\n\n")
+            writeStringUtf8("id: ${event.sequenceNumber}\n")
+            writeStringUtf8("event: ${event.eventType}\n")
+            writeStringUtf8("data: ${event.toJson()}\n")
+            writeStringUtf8("\n")
             flush()
         }
     }
