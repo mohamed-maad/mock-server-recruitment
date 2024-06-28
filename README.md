@@ -77,6 +77,7 @@ should be updated with all events which have happened to the person.
 fetch data from your person endpoint. The tests will check if your application is working as expected.
 7) Send a pull request to the skeleton repository with your solution.
 
+
 ### 0) Setup:
 
 Ensure that your application is responding on the following url: http://localhost:8081
@@ -119,7 +120,7 @@ Use a DAO
 
 ### 5) Create person controller:
 
-The endpoint should respond to at the following url: http://localhost:8081/person/{socSecNum}
+The endpoint should respond at the following url: http://localhost:8081/person/{socSecNum}
 
 The client of this mock server sends the following headers, which is the one your endpoint is responding to:
 
