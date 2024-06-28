@@ -4,6 +4,8 @@
 
 This is an application for testing the skills of developers applying for *Java Backend Developer* positions.
 
+Depending on the skills of the applicant, it is **not expected** that all tasks are completed.
+
 ### Tips
 
 Use your favourite http client (curl, Postman, Insomnia) to test the endpoints of this server. Looking at the
