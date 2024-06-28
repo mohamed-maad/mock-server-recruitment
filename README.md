@@ -75,7 +75,7 @@ Use JWT token to fetch events from the server.
 should be updated with all events which have happened to the person.
 6) Run tests using the test endpoints on this mock server. A client on this mock server will try to connect and 
 fetch data from your person endpoint. The tests will check if the server is working as expected.
-
+7) Send a pull request to the skeleton repository with your solution.
 
 ### 0) Setup:
 
@@ -140,5 +140,9 @@ GET http://localhost:8080/test/2
 GET http://localhost:8080/test/3
 ```
 
+### 7) Send a pull request:
+
+Send a pull request to the skeleton repository with your solution at: 
+https://github.com/mohamed-maad/server-skeleton-recruitment-junior
 
 
