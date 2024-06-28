@@ -1,7 +1,7 @@
 {
-  "username": "Skjervald",
-  "password": "Tvedt",
-  "jwtSecret": "Skjervald Tvedt",
+  "username": "Donald",
+  "password": "Fantonald",
+  "jwtSecret": "Donald Duck",
   "jwtIssuer": "http://0.0.0.0:8080/",
   "jwtAudience": "http://0.0.0.0:8080/data",
   "jwtRealm": "Access to 'data'"

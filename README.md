@@ -91,8 +91,8 @@ Content-Type: application/x-www-form-urlencoded
 Use the following credentials:
 
 ```
-username: Skjervald
-password: Tvedt
+username: Donald
+password: Fantonald
 ```
 
 ### 2) Use token to fetch events:
