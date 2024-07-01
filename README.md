@@ -2,8 +2,8 @@
 
 ### It is **not expected** that all tasks are completed, depending on the experience level of the applicant.
 
-If juniors complete 2-4 tasks, it is considered adequate. Seniors should complete all of them.
-The more you solve the better.
+If juniors complete 2-4 tasks, it is considered adequate. The more you solve the better.
+Seniors should complete all the tasks.
 
 ### Please send an email if something is not working as expected.
 
