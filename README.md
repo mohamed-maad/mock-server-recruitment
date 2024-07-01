@@ -11,6 +11,8 @@ Depending on the skills of the applicant, it is **not expected** that all tasks 
 Use your favourite http client (curl, Postman, Insomnia) to test the endpoints of this server. Looking at the
 response will help you understand how to handle the data.
 
+If saving to a database is too difficult, you can instead save the data in memory as a `List<Person>` and `List<Event>`.
+
 ## What you will need
 
 1) Dev environment with Java 21
