@@ -67,28 +67,28 @@ When a person is created, the event type is `PERSON_CREATED`, and a `Person` Jso
 
 ## The task
 
-0) *Optional:* Clone the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment 
-1) Create a REST client which gets the Jwt token from the server. Use username and password
+1) Setup submission repository. *Optional:* Clone the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment 
+2) Create a REST client which gets the Jwt token from the server. Use username and password
 
 Use JWT token to fetch events from the server.
 
-2) Create a REST client which fetches events from the server. 
-3) Save the events to a table.
-4) Use the same events to create a table with people, and update their information.
-5) Create a REST controller which allows for a client to fetch a person by its social security number. The person
+3) Create a REST client which fetches events from the server. 
+4) Save the events to a table.
+5) Use the same events to create a table with people, and update their information.
+6) Create a REST controller which allows for a client to fetch a person by its social security number. The person
 should be updated with all events which have happened to the person.
-6) Run tests using the test endpoints on this mock server. A client on this mock server will try to connect and 
+7) Run tests using the test endpoints on this mock server. A client on this mock server will try to connect and 
 fetch data from your person endpoint. The tests will check if your application is working as expected.
 
 
-### 0) Setup:
+### 1) Setup:
 
 - Clone and run this mock server application. You can use: `./gradlew run`
 - *Optional:* Clone the skeleton repository
 - Create your own repository and push code to it
 - Ensure that your application is responding on the following url: http://localhost:8081
 
-### 1) Get token:
+### 2) Get token:
 
 ```
 GET http://localhost:8080/token
@@ -104,7 +104,7 @@ password: Fantonald
 
 **The token is valid for 5 minutes.**
 
-### 2) Use token to fetch events:
+### 3) Use token to fetch events:
 
 ```
 GET http://localhost:8080/events
@@ -118,15 +118,15 @@ GET http://localhost:8080/events/23
 GET http://localhost:8080/events/from/13
 ```
 
-### 3) Save events to database:
+### 4) Save events to database:
 
 Save to a table in your database
 
-### 4) Save people to database and update their information:
+### 5) Save people to database and update their information:
 
 Save to a table in your database
 
-### 5) Create person controller:
+### 6) Create person controller:
 
 The endpoint should respond at the following url: http://localhost:8081/person/{socSecNum}
 
@@ -139,7 +139,7 @@ Accept: application/json
 
 The client expects a `Person` in return.
 
-### 6) Run tests:
+### 7) Run tests:
 
 These don't need authentication. You can trigger them through curl, Postman or Insomnia, or from your program if you want.
 
