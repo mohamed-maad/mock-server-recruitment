@@ -81,7 +81,7 @@ fetch data from your person endpoint. The tests will check if your application i
 
 ### 0) Setup:
 
-- Run this mock server application
+- Clone and run this mock server application. You can use: `./gradlew run`
 - Fork the skeleton repository
 - Write new code in your fork
 - Ensure that your application is responding on the following url: http://localhost:8081
@@ -99,6 +99,8 @@ Use the following credentials:
 username: Donald
 password: Fantonald
 ```
+
+**The token is valid for 5 minutes.**
 
 ### 2) Use token to fetch events:
 
