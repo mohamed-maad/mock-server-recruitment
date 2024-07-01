@@ -1,17 +1,17 @@
 # Mock Server DS
 
+### It is **not expected** that all tasks are completed, depending on the experience level of the applicant.
+
 ### Please send an email if something is not working as expected.
 
 This is an application for testing the skills of developers applying for *Java/Kotlin Backend Developer* positions.
-
-Depending on the skills of the applicant, it is **not expected** that all tasks are completed.
 
 ### Tips
 
 Use your favourite http client (curl, Postman, Insomnia) to test the endpoints of this server. Looking at the
 response will help you understand how to handle the data.
 
-If saving to a database is too difficult, you can instead save the data in memory as a `List<Person>` and `List<Event>`.
+If saving to a database is too difficult, you can instead save the data in runtime memory as a `List<Person>` and `List<Event>`.
 
 ## What you will need
 
