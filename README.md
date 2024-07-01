@@ -8,10 +8,10 @@ This is an application for testing the skills of developers applying for *Java/K
 
 ### Tips
 
-Use your favourite http client (curl, Postman, Insomnia) to test the endpoints of this server. Looking at the
+- Use your favourite http client (curl, Postman, Insomnia) to test the endpoints of this server. Looking at the
 response will help you understand how to handle the data.
 
-If saving to a database is too difficult, you can instead save the data in runtime memory as a `List<Person>` and `List<Event>`.
+- If saving to a database is too difficult, you can instead save the data in runtime memory as a `List<Person>` and `List<Event>`.
 
 ## What you will need
 
