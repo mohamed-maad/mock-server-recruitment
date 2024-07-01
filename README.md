@@ -2,7 +2,7 @@
 
 ### Please send an email if something is not working as expected.
 
-This is an application for testing the skills of developers applying for *Java Backend Developer* positions.
+This is an application for testing the skills of developers applying for *Java/Kotlin Backend Developer* positions.
 
 Depending on the skills of the applicant, it is **not expected** that all tasks are completed.
 
@@ -14,19 +14,19 @@ response will help you understand how to handle the data.
 ## What you will need
 
 1) Dev environment with Java 21
-2) PostgreSQL database 14 or newer
-3) Clone the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment
+2) PostgreSQL 14 or newer
 
 ## Requirements for the task
 
 1) Written in Java or Kotlin
 2) Use Spring or Quarkus framework
 3) Communicate with PostgreSQL database
+4) Fork the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment
 
 ## System description
 
 This application is a mock server which mimics the behaviour of Folkeregisteret and how Skatteetaten handles
-data distribution about people through feed. All information about a person starts by an event which signals
+data distribution about people through an event feed. All information about a person starts by an event which signals
 that the person har been created, followed by different events which signal that an attribute of the person has
 been updated. 
 
@@ -65,7 +65,7 @@ When a person is created, the event type is `PERSON_CREATED`, and a `Person` Jso
 
 ## The task
 
-0) Clone the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment 
+0) Fork the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment 
 1) Create a REST client which gets the Jwt token from the server. Use username and password
 
 Use JWT token to fetch events from the server.
@@ -77,12 +77,14 @@ Use JWT token to fetch events from the server.
 should be updated with all events which have happened to the person.
 6) Run tests using the test endpoints on this mock server. A client on this mock server will try to connect and 
 fetch data from your person endpoint. The tests will check if your application is working as expected.
-7) Send a pull request to the skeleton repository with your solution.
 
 
 ### 0) Setup:
 
-Ensure that your application is responding on the following url: http://localhost:8081
+- Run this mock server application
+- Fork the skeleton repository
+- Write new code in your fork
+- Ensure that your application is responding on the following url: http://localhost:8081
 
 ### 1) Get token:
 
@@ -118,7 +120,7 @@ Save to a table in your database
 
 ### 4) Save people to database and update their information:
 
-USave to a table in your database
+Save to a table in your database
 
 ### 5) Create person controller:
 
@@ -143,9 +145,8 @@ GET http://localhost:8080/test/2
 GET http://localhost:8080/test/3
 ```
 
-### 7) Send a pull request:
+## Submission
 
-Send a pull request to the skeleton repository with your solution at: 
-https://github.com/mohamed-maad/server-skeleton-recruitment 
+Please send a link of your forked repository to your contact person.
 
 
