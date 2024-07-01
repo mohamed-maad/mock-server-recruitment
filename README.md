@@ -2,6 +2,9 @@
 
 ### It is **not expected** that all tasks are completed, depending on the experience level of the applicant.
 
+If juniors complete 2-4 tasks, it is considered adequate. Seniors should complete all of them.
+The more you solve the better.
+
 ### Please send an email if something is not working as expected.
 
 This is an application for testing the skills of developers applying for *Java/Kotlin Backend Developer* positions.
@@ -13,6 +16,9 @@ response will help you understand how to handle the data.
 
 - If saving to a database is too difficult, you can instead save the data in runtime memory as a `List<Person>` and `List<Event>`.
 
+- Google is your friend.
+- Search for `Concept + Baeldung`. Example: `Spring REST client Baeldung`.
+
 ## What you will need
 
 1) Dev environment with Java 21
@@ -23,7 +29,9 @@ response will help you understand how to handle the data.
 1) Written in Java or Kotlin
 2) Use Spring or Quarkus framework
 3) Communicate with PostgreSQL database
-4) *Optional:* Clone the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment
+4) *Optional:* Clone the skeleton repository *(Kotlin or Java)*: 
+- https://github.com/mohamed-maad/server-skeleton-recruitment
+- https://github.com/mohamed-maad/server-skeleton-java
 
 ## System description
 
@@ -67,7 +75,11 @@ When a person is created, the event type is `PERSON_CREATED`, and a `Person` Jso
 
 ## The task
 
-1) Setup submission repository. *Optional:* Clone the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment 
+1) Setup submission repository. *Optional:* Clone the skeleton repository *(Kotlin or Java)*: 
+
+- https://github.com/mohamed-maad/server-skeleton-recruitment 
+- https://github.com/mohamed-maad/server-skeleton-java 
+
 2) Create a REST client which gets the Jwt token from the server. Use username and password
 
 Use JWT token to fetch events from the server.
@@ -106,16 +118,25 @@ password: Fantonald
 
 ### 3) Use token to fetch events:
 
+This endpoint uses SSE. It sends events to the client as they happen.
+
 ```
 GET http://localhost:8080/events
 Authorization: Bearer {{mock_server_token}}
 ```
 
-Other endpoints:
+This endpoint fetches events from a specific sequence number:
+
+```
+GET http://localhost:8080/events/from/13
+Authorization: Bearer {{mock_server_token}}
+```
+
+You can use this endpoint to fetch a specific event by sequence number:
 
 ```
 GET http://localhost:8080/events/23
-GET http://localhost:8080/events/from/13
+Authorization: Bearer {{mock_server_token}}
 ```
 
 ### 4) Save events to database:
