@@ -23,7 +23,7 @@ If saving to a database is too difficult, you can instead save the data in memor
 1) Written in Java or Kotlin
 2) Use Spring or Quarkus framework
 3) Communicate with PostgreSQL database
-4) Fork the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment
+4) *Optional:* Clone the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment
 
 ## System description
 
@@ -67,7 +67,7 @@ When a person is created, the event type is `PERSON_CREATED`, and a `Person` Jso
 
 ## The task
 
-0) Fork the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment 
+0) *Optional:* Clone the skeleton repository: https://github.com/mohamed-maad/server-skeleton-recruitment 
 1) Create a REST client which gets the Jwt token from the server. Use username and password
 
 Use JWT token to fetch events from the server.
@@ -84,8 +84,8 @@ fetch data from your person endpoint. The tests will check if your application i
 ### 0) Setup:
 
 - Clone and run this mock server application. You can use: `./gradlew run`
-- Fork the skeleton repository
-- Write new code in your fork
+- *Optional:* Clone the skeleton repository
+- Create your own repository and push code to it
 - Ensure that your application is responding on the following url: http://localhost:8081
 
 ### 1) Get token:
@@ -151,6 +151,6 @@ GET http://localhost:8080/test/3
 
 ## Submission
 
-Please send a link of your forked repository to your contact person.
+Please send a link of your repository to your contact person.
 
 
