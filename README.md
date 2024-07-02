@@ -75,6 +75,8 @@ When a person is created, the event type is `PERSON_CREATED`, and a `Person` Jso
 
 ## The task
 
+#### Summary:
+
 1) Setup submission repository. *Optional:* Clone the skeleton repository *(Kotlin or Java)*: 
 
 - https://github.com/mohamed-maad/server-skeleton-recruitment 
@@ -149,7 +151,7 @@ Save to a table in your database
 
 ### 6) Create person controller:
 
-The endpoint should respond at the following url: http://localhost:8081/person/{socSecNum}
+The endpoint should respond at the following url: `GET` http://localhost:8081/person/{socSecNum}
 
 The client of this mock server sends the following headers, which is the one your endpoint is responding to:
 
