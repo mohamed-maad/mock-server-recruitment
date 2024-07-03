@@ -10,7 +10,7 @@ import io.ktor.server.routing.*
 fun Route.tokenRouting(settings: Settings) {
     authenticate("auth-form") {
         route("token") {
-            get {
+            post {
                 val username = call.principal<UserIdPrincipal>()?.name
                 val token = JwtUtil.generateToken(username!!, settings)
                 call.respond(hashMapOf("token" to token))

@@ -105,7 +105,7 @@ fetch data from your person endpoint. The tests will check if your application i
 ### 2) Get token:
 
 ```
-GET http://localhost:8080/token
+POST http://localhost:8080/token
 Content-Type: application/x-www-form-urlencoded
 ```
 
