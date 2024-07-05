@@ -126,7 +126,7 @@ object MockDatabaseUtil {
                 eventType = PERSON_CREATED,
                 value = Person(
                     name = "Per Persson",
-                    socSecNum = "31085439599",
+                    socSecNum = "51088439599",
                     address = "Fjellveien 1",
                     email = "per.persson@epost.no",
                     phone = "95011223"
@@ -284,7 +284,7 @@ object MockDatabaseUtil {
     fun getPeopleChangeList(): List<PersonChange> {
         val person1 = PersonChange(
             Person("Ola Nordmann", "19056726783", "Tollbugata 11", "ola.nordmann@epost.no", "40516390"),
-            Person("Ola Hansen", "19056726783", "Nyveien 12", "ola.nordmann@epost.no", "40516390")
+            Person("Ola Hansen", "19056726783", "Nyveien 12", "ola.hansen@nyepost.no", "40516390")
         )
 
         val person2 = PersonChange(
@@ -298,8 +298,8 @@ object MockDatabaseUtil {
         )
 
         val person4 = PersonChange(
-            Person("Per Persson", "31085439599", "Fjellveien 1", "per.persson@epost.no", "90011223"),
-            Person("Per Persson", "32085439599", "Fjelltoppen 11", "per.persson@epost.no", "90112233")
+            Person("Per Persson", "51088439599", "Fjellveien 1", "per.persson@epost.no", "90011223"),
+            Person("Per Persson", "11088439599", "Fjelltoppen 11", "per.persson@epost.no", "90112233")
         )
 
         val person5 = PersonChange(
@@ -322,10 +322,10 @@ object MockDatabaseUtil {
 
     fun getPersonList(): List<Person> {
         return listOf(
-            Person("Ola Hansen", "19056726783", "Nyveien 12", "ola.nordmann@epost.no", "40516390"),
+            Person("Ola Hansen", "19056726783", "Nyveien 12", "ola.hansen@nyepost.no", "40516390"),
             Person("Kari Johansen", "31077714505", "Blomsterveien 34", "kari.johansen@nyepost.no", "90776220"),
             Person("Nils Johansen", "25102070758", "Skogveien 10", "nils.johansen@nyepost.no", "90807060"),
-            Person("Per Persson", "32085439599", "Fjelltoppen 11", "per.persson@epost.no", "90112233"),
+            Person("Per Persson", "11088439599", "Fjelltoppen 11", "per.persson@epost.no", "90112233"),
             Person("Anna Andersson", "03049448170", "Havnegata 5", "anna.andersson@nyepost.no", "92233445"),
             Person("Elin Hansen", "04082085608", "Nyveien 15", "elin.eriksen@epost.no", "93344556"),
             Person("Ivar Hansen", "12120673493", "Bakkegata 20", "ivar.hansen@nyepost.no", "94455667"),
